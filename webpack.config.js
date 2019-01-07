@@ -87,12 +87,13 @@ const config = {
               sourceMap: dev,
               plugins: [
                 require('autoprefixer')({
-                  browsers: ['last 2 versions', 'ie > 8']
+                  browsers: ['last 2 versions', 'ie > 7']
                 }),
                 require('css-mqpacker')({
                   sort: true
                 }),
-                require('cssnano')()
+                require('cssnano')(),
+                require('postcss-preset-env')()
               ]
             }
           },
